@@ -21,11 +21,13 @@
         
         <!-- Rounded Search Bar -->
         <div class="relative w-full max-w-2xl px-2 sm:px-0">
-            <input type="text" placeholder="Search for stocks, markets, insights..." 
-                   class="w-full px-6 py-4 text-lg rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300">
-            <button class="absolute right-2 top-2 bg-blue-600 text-white px-5 py-3 rounded-full hover:bg-blue-700 text-sm sm:text-base">
-                Search
-            </button>
+            <form action="{{ route('dashboard.search') }}" method="GET">
+                <input type="text" name="query" value="{{ request('query') }}" placeholder="Search for stocks, markets, insights..." 
+                    class="w-full px-6 py-4 text-lg rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300">
+                <button type="submit" class="absolute right-2 top-2 bg-blue-600 text-white px-5 py-3 rounded-full hover:bg-blue-700 text-sm sm:text-base">
+                    Search
+                </button>
+            </form>
         </div>
     </div>
 </x-app-layout>

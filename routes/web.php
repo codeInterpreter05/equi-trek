@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\socialiteController;
+use App\Http\Controllers\FormCompanyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,5 +23,19 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+Route::get('/formcompany/create', [FormCompanyController::class, 'create'])->name('formcompany.create');
+Route::post('/formcompany/store', [FormCompanyController::class, 'store'])->name('formcompany.store');
+
+
+Route::get('/dashboard', [FormCompanyController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard/search', [FormCompanyController::class, 'search'])->name('dashboard.search');
+
+Route::get('/company/{id}', [FormCompanyController::class, 'show'])->name('company.show');
+
+
+
 
 require __DIR__.'/auth.php';
