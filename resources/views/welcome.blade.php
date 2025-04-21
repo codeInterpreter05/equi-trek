@@ -14,7 +14,7 @@
         <h1 class="text-2xl font-bold text-gray-800">EquiTrek</h1>
         
         <!-- Join In Button -->
-        <a href="{{ route('login') }}" class="text-black bg-blue-600 px-5 py-2 rounded-lg text-lg font-medium transition-transform transform hover:scale-105 hover:bg-blue-700 duration-300">
+        <a href="{{ route('login') }}" class="text-black bg-white-600 px-5 py-2 rounded-lg text-lg font-medium transition-transform transform hover:scale-105 hover:bg-white-700 duration-300">
             Join In
         </a>
     </nav>
