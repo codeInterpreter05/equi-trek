@@ -13,9 +13,16 @@ class FormCompany extends Model
 
     protected $fillable = [
         'name',
-        'symbol',
-        'sector',
-        'industry',
+        'about',
         'market_cap',
+        'current_price',
+        'high_low',
+        'stock_pe',
+        'book_value',
+        'dividend_yield',
+        'roce',
+        'roe',
+        'face_value',  // Added field
+        'url',          // Added field
     ];
 }
